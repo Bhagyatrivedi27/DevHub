@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server": "supervisor server"
+    "server": "supervisor server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "Bhagya Trivedi",
   "license": "MIT",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "npm-run-all": "^4.1.5",
     "supervisor": "^0.12.0"
   }
 }
