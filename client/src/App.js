@@ -9,6 +9,7 @@ import {loadUser} from './actions/auth'
 import setAuthToken from './utils/setAuthToken'
 import Dashboard from './components/dashboard/Dashboard'
 import CreateProfile from './components/profile-forms/CreateProfile'
+import EditProfile from './components/profile-forms/EditProfile'
 import PrivateRoute from './components/routing/PrivateRoute'
 //Redux 
 import {Provider} from 'react-redux'
@@ -36,6 +37,8 @@ const App = () => {
       <Route exact path = "/login" component={Login}></Route>
       <PrivateRoute exact path = "/dashboard" component={Dashboard}></PrivateRoute>
       <PrivateRoute exact path = "/create-profile" component={CreateProfile}></PrivateRoute>
+      <PrivateRoute exact path = "/edit-profile" component={EditProfile}></PrivateRoute>
+
       </Switch>  
     </section>
   </Fragment>
